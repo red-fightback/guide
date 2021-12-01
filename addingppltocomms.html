@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Adding People to Mattermost / Guides</title>
+    <link rel="icon" type="image/x-icon" href="images/site/webicon.webp">
+    <!-- <meta http-equiv="content-security-policy" content="default-src 'self' https://;"> -->
+    <meta charset="utf-8">
+    <meta name="description" content="Privacy policy and cookies information">
+    <meta name="keywords" content="Guide, Tech, Privacy, Cookies">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="overbox" class="flexobject">
+        <!-- left-side -->
+        <header id="leftside" class="flexobject" role="banner">
+            <nav id="navscontainer" class="flexobject" role="navigation">
+                <!-- icon ontop of navsbar -->
+                <a id="navsheader" href="index.html" role="button">
+                    <img id="homelink" src="images/site/webicontranswebp.webp" alt="Logo">
+                </a>
+                <!-- main left-side navsbar -->
+                <div id="leftsidenavsbox" class="bubblebox4navs flexobject">
+                    <a class="navslink flexobject" style="padding-top:0.25rem;" href="index.html" role="button">
+                        <img class="svgblk" src="images/site/home_black_24dp.svg" alt="Home icon">
+                        <img class="svgwht" src="images/site/home_white_24dp.svg" alt="Home icon">
+                        <span class="navslabel">Home</span>
+                    </a>
+                    <hr class="navs">
+                    <a class="navslink flexobject" href="index.html#siteindex" role="button">
+                        <img class="svgblk" src="images/site/list_black_24dp.svg" alt="Index icon">
+                        <img class="svgwht" src="images/site/list_white_24dp.svg" alt="Index icon">
+                        <span class="navslabel">Index</span>
+                    </a>
+                    <hr class="navs">
+                    <a class="navslink flexobject" href="comms.html" role="button">
+                        <img id="mmostsvg" class="svgblk" src="images/site/mattermostblack.svg" alt="Comms icon">
+                        <img id="mmostsvg" class="svgwht" src="images/site/mattermostwhite.svg" alt="Comms icon">
+                        <span class="navslabel">Comms</span>
+                    </a>
+                    <hr class="navs">
+                    <a class="navslink flexobject" style="padding-bottom:0.25rem;" href="wiki.html" role="button">
+                        <img class="svgblk" src="images/site/menu_book_black_24dp.svg" alt="Wiki icon">
+                        <img class="svgwht" src="images/site/menu_book_white_24dp.svg" alt="Wiki icon">
+                        <span class="navslabel">Wiki</span>
+                    </a>
+                </div>
+            </nav>            
+        </header>
+
+        <!-- right-side -->
+        <div id="rightside" class="flexobject">
+            <div id="center" class="flexobject">
+                <!-- site heading -->
+                <div id="titlebox" class="flexobject">
+                    <!-- header image on mobile -->
+                    <a class="mobheader homelink" href="index.html" role="button">
+                        <img id="homelink" src="images/site/webicontranswebp.webp" alt="Logo">
+                    </a>
+                    <h1 role="heading">Inviting People to Comms Teams / Guides</h1>
+                </div>
+                <!-- right-side location bar, navs on mobile -->
+                <nav id="bubblebox4locbar" class="flexobject" role="navigation">
+                    <!-- location on desktop-->
+                    <a class="loclinks" href="index.html" role="link">Home /</a>
+                    <a class="loclinks" href="comms.html" role="link">Comms /</a>
+                    <a class="loclinks" href="commsthreads.html" role="link">Inviting People</a>
+                    <!-- navs on mobile -->
+                    <a class="moblink navslink flexobject" href="index.html" role="button">
+                        <img class="svgblk" src="images/site/home_black_24dp.svg" alt="Home icon">
+                        <img class="svgwht" src="images/site/home_white_24dp.svg" alt="Home icon">
+                        <span class="navslabel">Home</span>
+                    </a>
+                    <a class="moblink navslink flexobject" href="index.html#siteindex" role="button">
+                        <img class="svgblk" src="images/site/list_black_24dp.svg" alt="Index icon">
+                        <img class="svgwht" src="images/site/list_white_24dp.svg" alt="Index icon">
+                        <span class="navslabel">Index</span>
+                    </a>
+                    <a class="moblink navslink flexobject" href="comms.html" role="button">
+                        <img id="mmostsvg" class="svgblk" src="images/site/mattermostblack.svg" alt="Comms icon">
+                        <img id="mmostsvg" class="svgwht" src="images/site/mattermostwhite.svg" alt="Comms icon">
+                        <span class="navslabel">Comms</span>
+                    </a>
+                    <a class="moblink navslink flexobject" href="wiki.html" role="button">
+                        <img class="svgblk" src="images/site/menu_book_black_24dp.svg" alt="Wiki icon">
+                        <img class="svgwht" src="images/site/menu_book_white_24dp.svg" alt="Wiki icon">
+                        <span class="navslabel">Wiki</span>
+                    </a>
+                </nav>
+
+                <!-- article main -->
+                <main>
+                    <article class="flexobject">
+                        <!-- title, author info, intro -->
+                        <header class="bubblebox4content flexobject">
+                            <!-- article title -->
+                            <h2 id="threadsguide" class="" role="heading">Inviting People to Comms Teams</h2>
+                            <!-- author, date -->
+                            <span class="content">Page last updated <time datetime="2021-11-30 23:00">2021/11/30</time>, CES</span>
+                            <hr>
+                            <h3 id="intro" style="display: none;">Intro</h3>
+                            <p>While you can add people in the same Team to a channel from mobile apps, you can only add new people to Teams from the Comms web app in the browser, at <code>https://comms.redfightback.org</code> or using the Desktop app. </p>
+                            <p class="warning"><b>Make sure you're in the Team you're trying to invite to. In most cases this is your branch Team.</b></p>
+                            <div class="flexobject warning" style="align-items: center;"><img src="images/comms/comms-invite.jpg" width="300px"></div>
+                            <hr class="lasthr">
+                        </header>
+
+                        <section class="bubblebox4content">
+                            <h3 id="wocomms">Inviting new people without Comms Accounts</h3>
+                            <p>Note that you have to be a <code>Team Admin</code> in your branch team to add people to it. <code>Server Admins</code> can add people to any team.</p>
+                            <ol>
+                                <li>Select the Team menu at the top of the Navigation Panel.</li>
+                                <li>Select <code>Invite People.</code></li>
+                                <li>If there’s an option to invite members and guests, choose <code>Invite Members.</code></li>
+                                <li>In the <code>Invite People</code> field, enter the <b>email address</b> of the person you want to add.</li>
+                                <li>Select <code>Invite Members.</code></li>
+                            </ol>
+                            <hr>
+                            <h3 id="wicomms">Inviting people who already have Comms</h3>
+                            <ol>
+                                <li>Select the Team menu at the top of the Navigation Panel.</li>
+                                <li>Select <code>Invite People.</code></li>
+                                <li>If there’s an option to invite members and guests, choose <code>Invite Members.</code></li>
+                                <li>In the <code>Invite People</code> field, enter the <b>Comms <code>@handle</code></b> of the person you want to add.</li>
+                                <li>Select <code>Invite Members.</code></li>
+                            </ol>
+                            <hr>
+                            <h3 id="problems">Problems</h3>
+                            <p>1. Invitation was not sent: Your license does not support guest accounts</p>
+                            <p style="margin-left:1rem; margin-bottom:0.8rem;">Make sure you're inviting people to your Branch Team and not RFB Public. People can join RFB Public themselves once they're in your Branch Team.</p>
+                            <p>2. Someone removed themselves from Comms and now can't get back in, seeing 'No teams are available to join'</p>
+                            <p style="margin-left:1rem; margin-bottom:0.8em;">A Team Admin must send the person another invite, doing so using their Comms <code>@handle</code> and not their email address.</p>
+                            <p>3. Someone has lost the email they used to sign up to Comms</p>
+                            <p style="margin-left:1rem;">We don't have access to the email address they signed up with. They must make a new email, and then contact a Server Admin so their account can have the new email added.</p>
+                            <hr>
+                            <h3 id="related">Related:</h3>
+                            <ul style="margin-top: 0.2rem; margin-bottom:0.2rem;">
+                                <li><a href="logincomms.html">Logging In to Comms</a></li>
+                            </ul>
+                            <hr class="lasthr">
+                        </section>
+                    </article>
+                </main>
+
+                <!-- site footer -->
+                <nav id="sitefooter" class="bubblebox flexobject" role="contentinfo">
+                    <div id="sitefooterlinks">
+                        <a class="footerlinks" href="privacy.html" role="link">Privacy Policy</a>
+                        <span class="footerbp">&#8226</span>
+                        <a class="footerlinks" href="accessibility.html" role="link">Accessibility</a>
+                        <span class="footerbp">&#8226</span>
+                        <a class="footerlinks" href="about.html" role="link">About</a>
+                        <span class="footerbp">&#8226</span>
+                        <a class="footerlinks" href="mailto:ces@redfightback.org" role="link">Contact: <code class="inlinecode" style="font-size: 0.8em;">ces@redfightback.org</code></a>
+                        <span class="footerbp">&#8226</span>
+                        <a class="footerlinks" href="https://redfightback.org" role="link">Red Fightback</a>
+                        <span class="footerbp">&#8226</span>
+                        <span style="font-size: 0.8rem;">&lt3</span>
+                    </div>
+                    <div id="copyrightinfo">© Red Fightback 2021 - All works on this website, unless otherwise noted, are licensed under the CC BY-NC-ND 4.0 license.</div>
+                </nav>
+            </div>
+
+            <!-- contents list far-right side -->
+            <nav id="contentslist" class="flexobject" role="navigation">
+                <!--  blank space -->
+                <div id="contentsheader"></div>
+                <!-- contents list -->
+                <nav id="bubblebox4contentslist" class="flexobject">
+                    <span id="contstitle" class="content">Contents List</span>
+                    <a class="contslink" href="#intro" role="link">&#8227 Intro</a>
+                    <a class="contslink" href="#wocomms" role="link">&#8227 Inviting new people without Comms Accounts</a>
+                    <a class="contslink" href="#wicomms" role="link">&#8227 Inviting people who already have Comms</a>
+                    <a class="contslink" href="#problems" role="link">&#8227 Problems</a>
+                    <a class="contslink" href="#related" role="link">&#8227 Related</a>
+                </nav>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>

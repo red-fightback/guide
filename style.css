@@ -211,6 +211,18 @@ code {
     padding: 0.2rem 1rem 0.2rem 0.7rem;
 }
 
+.warning {
+    background-color: #fff3e0;
+    border-left: 0.3rem solid #ffb74d;
+    color: #b33f00;
+    /* background-color: #edfae2;
+    border-left: 0.3rem solid #a6e66d;
+    color: #2b3c1c; */
+    border-radius: 0.1rem;
+    margin: 0rem -1rem 0rem -1rem;
+    padding: 0.2rem 1rem 0.2rem 0.7rem;
+}
+
 .indexitem {
     margin: 0rem 0rem 0.25rem 0rem;
     font-size: 1.1rem;
@@ -252,7 +264,7 @@ iframe.vidframe {
 }
 
 #navscontainer {
-    max-width: 200px;
+    width:180px;
 }
 
 #navsheader {
@@ -307,7 +319,7 @@ hr.navs {
 }
 
 #center {
-    max-width: 840px;
+    max-width: 760px;
 }
 
 #titlebox {
@@ -348,8 +360,7 @@ hr.navs {
     border-radius: 0.3em;
     margin-bottom: 0.4em;
     padding: 0.25em 0.5em 0.5em 0.5em;
-    max-width: 200px;
-    min-width: 140px;
+    width:180px;
     margin-left: 0.4em;
 }
 
