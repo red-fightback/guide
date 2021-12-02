@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Passwords and 2FA With Keycloak / Guides</title>
+    <link rel="icon" type="image/x-icon" href="images/site/webicon.webp">
+    <!-- <meta http-equiv="content-security-policy" content="default-src 'self' https://;"> -->
+    <meta charset="utf-8">
+    <meta name="description" content="Privacy policy and cookies information">
+    <meta name="keywords" content="Guide, Tech, Privacy, Cookies">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="overbox" class="flexobject">
+        <!-- left-side -->
+        <header id="leftside" class="flexobject" role="banner">
+            <nav id="navscontainer" class="flexobject" role="navigation">
+                <!-- icon ontop of navsbar -->
+                <a id="navsheader" href="index.html" role="button">
+                    <img id="homelink" src="images/site/webicontranswebp.webp" alt="Logo">
+                </a>
+                <!-- main left-side navsbar -->
+                <div id="leftsidenavsbox" class="bubblebox4navs flexobject">
+                    <a class="navslink flexobject" style="padding-top:0.25rem;" href="index.html" role="button">
+                        <img class="svgblk" src="images/site/home_black_24dp.svg" alt="Home icon">
+                        <img class="svgwht" src="images/site/home_white_24dp.svg" alt="Home icon">
+                        <span class="navslabel">Home</span>
+                    </a>
+                    <hr class="navs">
+                    <a class="navslink flexobject" href="index.html#siteindex" role="button">
+                        <img class="svgblk" src="images/site/list_black_24dp.svg" alt="Index icon">
+                        <img class="svgwht" src="images/site/list_white_24dp.svg" alt="Index icon">
+                        <span class="navslabel">Index</span>
+                    </a>
+                    <hr class="navs">
+                    <a class="navslink flexobject" href="comms.html" role="button">
+                        <img id="mmostsvg" class="svgblk" src="images/site/mattermostblack.svg" alt="Comms icon">
+                        <img id="mmostsvg" class="svgwht" src="images/site/mattermostwhite.svg" alt="Comms icon">
+                        <span class="navslabel">Comms</span>
+                    </a>
+                    <hr class="navs">
+                    <a class="navslink flexobject" style="padding-bottom:0.25rem;" href="wiki.html" role="button">
+                        <img class="svgblk" src="images/site/menu_book_black_24dp.svg" alt="Wiki icon">
+                        <img class="svgwht" src="images/site/menu_book_white_24dp.svg" alt="Wiki icon">
+                        <span class="navslabel">Wiki</span>
+                    </a>
+                </div>
+            </nav>            
+        </header>
+
+        <!-- right-side -->
+        <div id="rightside" class="flexobject">
+            <div id="center" class="flexobject">
+                <!-- site heading -->
+                <div id="titlebox" class="flexobject">
+                    <!-- header image on mobile -->
+                    <a class="mobheader homelink" href="index.html" role="button">
+                        <img id="homelink" src="images/site/webicontranswebp.webp" alt="Logo">
+                    </a>
+                    <h1 role="heading">Passwords and 2 Factor Authentication (2FA) / Guides</h1>
+                </div>
+                <!-- right-side location bar, navs on mobile -->
+                <nav id="bubblebox4locbar" class="flexobject" role="navigation">
+                    <!-- location on desktop-->
+                    <a class="loclinks" href="index.html" role="link">Home /</a>
+                    <a class="loclinks" href="comms.html" role="link">Auth</a>
+                    <!-- navs on mobile -->
+                    <a class="moblink navslink flexobject" href="index.html" role="button">
+                        <img class="svgblk" src="images/site/home_black_24dp.svg" alt="Home icon">
+                        <img class="svgwht" src="images/site/home_white_24dp.svg" alt="Home icon">
+                        <span class="navslabel">Home</span>
+                    </a>
+                    <a class="moblink navslink flexobject" href="index.html#siteindex" role="button">
+                        <img class="svgblk" src="images/site/list_black_24dp.svg" alt="Index icon">
+                        <img class="svgwht" src="images/site/list_white_24dp.svg" alt="Index icon">
+                        <span class="navslabel">Index</span>
+                    </a>
+                    <a class="moblink navslink flexobject" href="comms.html" role="button">
+                        <img id="mmostsvg" class="svgblk" src="images/site/mattermostblack.svg" alt="Comms icon">
+                        <img id="mmostsvg" class="svgwht" src="images/site/mattermostwhite.svg" alt="Comms icon">
+                        <span class="navslabel">Comms</span>
+                    </a>
+                    <a class="moblink navslink flexobject" href="wiki.html" role="button">
+                        <img class="svgblk" src="images/site/menu_book_black_24dp.svg" alt="Wiki icon">
+                        <img class="svgwht" src="images/site/menu_book_white_24dp.svg" alt="Wiki icon">
+                        <span class="navslabel">Wiki</span>
+                    </a>
+                </nav>
+
+                <!-- article main -->
+                <main>
+                    <article class="flexobject">
+                        <!-- title, author info, intro -->
+                        <header class="bubblebox4content flexobject">
+                            <!-- article title -->
+                            <h2 id="threadsguide" class="" role="heading">Passwords and 2 Factor Authentication (2FA)</h2>
+                            <!-- author, date -->
+                            <span class="content">Page last updated <time datetime="2021-12-01 23:00">2021/12/01</time>, CES</span>
+                            <hr>
+                            <h3 id="intro" style="display: none;">Intro</h3>
+                            <p>RFB Auth is a sign-in system that we use across all party services. It's built on Keycloak.</p>
+                            <p>A single sign-in means that you only need to log in once per session to use all of the party systems.</p>
+                            <p>RFB Auth also manages your name, initials, and email address. To get any of these changed, you can DM <code>@AY</code> on Comms or by email.</p>
+                            <p class="warning"><b>Applicants do not use RFB Auth to sign in.</b> Applicants sign up with the normal sign-in boxes presented at the sign-in screens for different services. (ie, applicants <b>don't</b> click "Sign in with RFB Auth" or "Sign in with Gitlab".)</p>
+                            <hr class="lasthr">
+                        </header>
+
+                        <section class="bubblebox4content">
+                            <h2>Passwords 🔑</h2>
+                            <hr>
+                            <h3 id="changepassM">Changing Passwords, Members</h3>
+                            <p>Changing passwords is done at <a href="https://auth.redfightback.org/auth/realms/rfb/account/#/security/signingin"><code>auth.redfightback.org</code></a>.</p>
+                            <p>You'll need to sign-in again before you can access it.</p>
+                            <p>Hit "Update" and you'll be prompted to put in your new password.</p>
+                            <hr>
+                            <h3 id="changepassA">Changing Passwords, Applicants</h3>
+                            <p>Applicants have individual accounts for each party service (ie, Comms, Jitsi, Wiki) and so to reset their passwords they follow the password reset instructions for each service.</p>
+                            <ul style="margin-top: 0.2rem; margin-bottom:0.2rem;">
+                                <li>Applicants Comms passwords are reset <a href="https://comms.redfightback.org/reset_password">here.</a></li>
+                            </ul>
+                            <hr>
+                            <h3 id="forgotpass">Forgotten Password</h3>
+                            <p>If you've forgotten your password, hitting "Forgot Password?" at the sign-in screen will send a password reset email to the email you provided when you signed up.</p>
+                            <p><b>If you've lost access to the email you used when you signed up,</b> we don't have access to the email address you signed up with. You must make a new email, and then contact a Server Admin (<code>@AY</code>) so your account can have the new email added.</p>
+                            <hr class="lasthr">
+                        </section>
+
+                        <section class="bubblebox4content">
+                            <h2>2 Factor Authentication 🔒</h2>
+                            <hr>
+                            <h3 id="rundown">2FA Rundown</h3>
+                            <p>2 Factor Authentication means that after you put in your username and password during sign-in, you'll be asked to provide a code from an <code>OTP Authenticator app</code>, or plug in and press the button on a <code>hardware security key</code>, like a Yubikey.</p>
+                            <p class="motivation">2FA adds an extremely secure layer to logging in and everybody is encouraged to use it. *Note that currently only members can use 2FA.</p>
+                            <hr>
+                            <h3 id="otp">OTP Authenticator app</h3>
+                            <p>OTP stands for One Time Password. They expire after one use and so every time you use it, you have to get a new one from the app.</p>
+                            <p>There are lots of apps that can generate OTPs for you, like <code>Google Authenticator</code> and <code>andOTP</code>. You're free to use whatever.
+                            <p>Set up an authenticator app at <a href="https://auth.redfightback.org/auth/realms/rfb/account/#/security/signingin"><code>auth.redfightback.org</code></a>.</p>
+                            <ol style="margin-top: 0.2rem; margin-bottom:0.2rem;">
+                                <li>Go to <a href="https://auth.redfightback.org/auth/realms/rfb/account/#/security/signingin"><code>Signing In</code></a>;</li>
+                                <li>Go to <code>Authenticator Application</code>;</li>
+                                <li>Click the Context Menu (the three dots <code>...</code> on the right hand side) and select <code>"Set Up Authenticator Application"</code>.</li>
+                                <li>Now open the authenticator app you've set up on your phone and find the part to <code>Scan QR Code</code>.</li>
+                                <li>Note, if the app asks if you want an OTP or a TOTP (Timed OTP) it doesn't matter which you choose.</li>
+                                <li>Scan the QR code with your phone.</li>
+                                <li>Enter the 6-digit password generated by your authenticator app.</li>
+                                <li>Finished! Now sign in as normal and you'll be asked to provide an authenticator code after you enter your initials and password.</li>
+                            </ol>
+                            <hr>
+                            <h3 id=key>Security Key</h3>
+                            <p>A security key is a USB-stick shaped device that avoids you putting in an OTP code by hand. You either plug it into your computer and press the button in order to authenticate, or you can use your phone's <code>NFC</code> capability to scan it.</p>
+                            <p>There are dozens of these available. Yubikey is the best known brand, and a key goes for around £25-£50. The cheapest one is fine, so long as it does everything you want it to. (ie, scannable with NFC so you can use it on your phone)</p>
+                            <p>Set up a security key at <a href="https://auth.redfightback.org/auth/realms/rfb/account/#/security/signingin"><code>auth.redfightback.org</code></a>.</p>
+                            <ol style="margin-top: 0.2rem; margin-bottom:0.2rem;">
+                                <li>Go to <a href="https://auth.redfightback.org/auth/realms/rfb/account/#/security/signingin"><code>Signing In</code></a>;</li>
+                                <li>Go to <code>Security Key</code>;</li>
+                                <li>Click the Context Menu (the three dots <code>...</code> on the right hand side) and select <code>"Set Up Security Key"</code>.</li>
+                                <li>Plug in your security key. Windows may prompt you to "set it up" (give it a name). You can if you like, it's all editable later.</li>
+                                <li>Depending on the security key it will start flashing or beeping. Press the button on it.</li>
+                                <li>Finished! Now sign in as normal and you'll be asked to plug in and press your security key after you enter your initials and password.</li>
+                            </ol>
+                            <hr>
+                            <h3 id="lost2fa">I'm Unable to 2FA; lost my device, etc</h3>
+                            <p>If you lose your phone, delete the authenticator app, lose your security key, etc you'll be unable to log in. However, having a System Admin change any of the information you have on RFB Auth deactivates your 2FA setup.</p>
+                            <p>ie, If you change your initials, 2FA will be deactivated and you'll have to set it up again. This can probably be used if you lose access to your 2FA device.</p>
+                            <hr class="lasthr">
+                        </section>
+
+                        <section class="bubblebox4content">
+                            <h2 id="tokens">An Explanation of Auth Tokens</h2>
+                            <span>By Comrade JF, 2021/05/24</span>
+                            <hr>
+                            <p>When you log in using RFB Auth, you get a 'token' back from the server. This token is just some data that says 'I'm X and I have permission to access this RFB stuff'. You can think of it like a rail ticket. When you want to go to an RFB service that requires a log in, you send your token along with the page request and it lets you in if it's valid, just like how you have to use your train ticket to get through the barriers to the platform. If you didn't have a token of some kind, you'd have to send your password every time, and this would be very annoying, in the same way that having to get cash out for every train barrier would be annoying.</p>
+                            <p>You pay for the train ticket once, and then that ticket represents your payment, so that any barrier or conductor who sees your ticket is satisfied that you've paid. It's the same for an auth token: you login once, and then you get a token that represents that login, so that when the server sees this token it is satisfied that you logged in. The problem is that, just as someone can steal your train ticket and use it themselves when they haven't actually paid, someone can steal your auth token and use it themselves when they haven't actually logged in. The solution is similar too. A train ticket usually only works for a particular amount time, so yes someone might steal it, but they won't be able to use it forever, and they'll have to steal another ticket or pay themselves. It's the same for an auth token. Someone might steal the token, but if you set a time limit for it, that token can't be used forever, and they'll have to steal another token or log in themselves.</p>
+                            <hr class="lasthr">
+                        </section>
+                    </article>
+                </main>
+
+                <!-- site footer -->
+                <nav id="sitefooter" class="bubblebox flexobject" role="contentinfo">
+                    <div id="sitefooterlinks">
+                        <a class="footerlinks" href="privacy.html" role="link">Privacy Policy</a>
+                        <span class="footerbp">&#8226</span>
+                        <a class="footerlinks" href="accessibility.html" role="link">Accessibility</a>
+                        <span class="footerbp">&#8226</span>
+                        <a class="footerlinks" href="about.html" role="link">About</a>
+                        <span class="footerbp">&#8226</span>
+                        <a class="footerlinks" href="mailto:ces@redfightback.org" role="link">Contact: <code class="inlinecode" style="font-size: 0.8em;">ces@redfightback.org</code></a>
+                        <span class="footerbp">&#8226</span>
+                        <a class="footerlinks" href="https://redfightback.org" role="link">Red Fightback</a>
+                        <span class="footerbp">&#8226</span>
+                        <span style="font-size: 0.8rem;">&lt3</span>
+                    </div>
+                    <div id="copyrightinfo">© Red Fightback 2021 - All works on this website, unless otherwise noted, are licensed under the CC BY-NC-ND 4.0 license.</div>
+                </nav>
+            </div>
+
+            <!-- contents list far-right side -->
+            <nav id="contentslist" class="flexobject" role="navigation">
+                <!--  blank space -->
+                <div id="contentsheader"></div>
+                <!-- contents list -->
+                <nav id="bubblebox4contentslist" class="flexobject">
+                    <span id="contstitle" class="content">Contents List</span>
+                    <a class="contslink" href="#intro" role="link">&#8227 Intro</a>
+                    <a class="contslink" href="#changepassM" role="link">&#8227 Changing Passwords, Members</a>
+                    <a class="contslink" href="#changepassA" role="link">&#8227 Changing Passwords, Applicants</a>
+                    <a class="contslink" href="#forgotpass" role="link">&#8227 Forgotten Passwords</a>
+                    <a class="contslink" href="#rundown" role="link">&#8227 2FA Rundown</a>
+                    <a class="contslink" href="#otp" role="link">&#8227 OTP Authentication App</a>
+                    <a class="contslink" href="#key" role="link">&#8227 Security Key</a>
+                    <a class="contslink" href="#lost2fa" role="link">&#8227 I'm Unable to 2FA</a>
+                    <a class="contslink" href="#tokens" role="link">&#8227 An Explanation of Auth Tokens</a>
+                </nav>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>
