@@ -63,7 +63,7 @@
                 <nav id="bubblebox4locbar" class="flexobject" role="navigation">
                     <!-- location on desktop-->
                     <a class="loclinks" href="index.html" role="link">Home /</a>
-                    <a class="loclinks" href="comms.html" role="link">Auth</a>
+                    <a class="loclinks" href="auth.html" role="link">Auth</a>
                     <!-- navs on mobile -->
                     <a class="moblink navslink flexobject" href="index.html" role="button">
                         <img class="svgblk" src="images/site/home_black_24dp.svg" alt="Home icon">
@@ -156,6 +156,7 @@
                                 <li>Go to <code>Security Key</code>;</li>
                                 <li>Click the Context Menu (the three dots <code>...</code> on the right hand side) and select <code>"Set Up Security Key"</code>.</li>
                                 <li>Plug in your security key. Windows may prompt you to "set it up" (give it a name). You can if you like, it's all editable later.</li>
+                                <li>Log in to RFB Auth and then click "Register". A box will pop up asking "Please input your registered authenticator's label". Just leave it default.</li>
                                 <li>Depending on the security key it will start flashing or beeping. Press the button on it.</li>
                                 <li>Finished! Now sign in as normal and you'll be asked to plug in and press your security key after you enter your initials and password.</li>
                             </ol>
@@ -163,6 +164,19 @@
                             <h3 id="lost2fa">I'm Unable to 2FA; lost my device, etc</h3>
                             <p>If you lose your phone, delete the authenticator app, lose your security key, etc you'll be unable to log in. However, having a System Admin change any of the information you have on RFB Auth deactivates your 2FA setup.</p>
                             <p>ie, If you change your initials, 2FA will be deactivated and you'll have to set it up again. This can probably be used if you lose access to your 2FA device.</p>
+                            <hr class="lasthr">
+                        </section>
+
+                        <section class="bubblebox4content">
+                            <h2 id="info">Info on Choosing Passwords</h2>
+                            <hr>
+                            <p class="motivation">The general rule of thumb for passwords is, <b>the longer and more random the better.</b> You can use a password manager like <a href="https://bitwarden.com/pricing/">Bitwarden</a> or the one built into Firefox to help keep track of extremely long, extremely random, unique passwords for each account you have.</p>
+                            <p>Some helpful info:</p>
+                            <ul style="margin-top: 0.2rem; margin-bottom:0.2rem;">
+                                <li><a href="https://wiki.archlinux.org/title/Security#Passwords">ArchLinux Wiki section on password security</a></li>
+                                <li><a href="https://passwordsgenerator.net/">A generic online password generator</a> - It's usually better to have a password generator + manager installed on your device rather than using one online or in a browser.</li>
+                                <li><a href="https://www.rempe.us/diceware/#eff"><cite>Diceware</cite> Passphrase Generator</a> - I'm not entirely sure how to use this, but it looks fun.</li>
+                            </ul>
                             <hr class="lasthr">
                         </section>
 

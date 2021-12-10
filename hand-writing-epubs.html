@@ -96,7 +96,7 @@
                             <!-- article title -->
                             <h2 id="threadsguide" class="" role="heading">Hand-Writing EPUBs</h2>
                             <!-- author, date -->
-                            <span class="content">Page last updated <time datetime="2021-11-30 21:30">2021/11/30</time>, CES</span>
+                            <span class="content">Page last updated <time datetime="2021-12-10 22:20">2021/12/10</time>, CES</span>
                             <hr>
                             <h3 id="intro" style="display: none;">Intro</h3>
                             <p>Right now, I just finished converting Activist Study (ARAK) from PDF to EPUB. It took me 3 days of constant work, copying 160 pages paragraph by paragraph and formatting them carefully to match the original.</p>
@@ -116,13 +116,13 @@
                             <p>EPUBs are a bundle of HTML and CSS files, media assets (images, or even audio and video files), and metadata compressed into a <code>.zip</code>.</p>
                             <p>You can see inside an <code>.epub</code> file by renaming the file extension from <code>.epub</code> to <code>.zip</code>, and then unpacking that file. Make sure you have file extensions visible, otherwise you'll have to change the file extension by right-clicking on the file, going to <code>Properties</code>, and renaming it from there.</p>
                             <p>Inside are the HTML files, CSS files, and folders for assets and some of the metadata.</p>
-                            <p>There is also the <code>content.odt</code> file, which is a manifest of all the files in the EPUB as well as containing the order in which the files should be displayed, and a <code>nav.html</code> or <code>toc.html</code> which is the contents page.</p>
+                            <p>There is also the <code>content.opf</code> file, which is a manifest of all the files in the EPUB as well as containing the order in which the files should be displayed, and a <code>toc.ncx</code> which is the contents page.</p>
                             <hr>
                             <h3 id="htmlcss">HTML, CSS</h3>
                             <p>EPUBs are kind of like simple little websites. HTML (hypertext markup language) and CSS (cascading style sheets) are the files that make up websites. HTML contains all text and instructions for the arrangement of things on the page, and CSS is used to style them all.</p>
                             <p>Don't be put off by HTML and CSS. They're both messy looking, but very simple to use and understand once you get the hang of it.</p>
                             <p>I can't (read: won't) go into detail about them here. Read the <a href="https://www.w3schools.com/html/default.asp">W3Schools</a> guides on both HTML and CSS if you'd like to learn how to use them. W3Schools has the best guides available for learning HTML and CSS, and also a variety of tutorials for programming languages.</p>
-                            <p>All you really need to know is that when an e-Reader device opens an EPUB, it will load all the HTML files contained in the <code>.epub</code> file in the order specified in the <code>&#60;spine&#62;</code> part of the <code>content.odt</code> file. More on that later.</p>
+                            <p>All you really need to know is that when an e-Reader device opens an EPUB, it will load all the HTML files contained in the <code>.epub</code> file in the order specified in the <code>&#60;spine&#62;</code> part of the <code>content.opf</code> file. More on that later.</p>
                             <hr>
                             <h3 id="openeditepub">Opening and Editing EPUBs</h3>
                             <p>2 programs; Calibre and Sigil; though you can open HTML files in almost any text editor.</p>
@@ -164,7 +164,7 @@
                             <h3 id="epubmetadata">EPUB Metadata</h3>
                             <p>The easy part is stuff like author, ISBN, etc. Follow best practices and put in as much info as you can, Sigil makes this easy.</p>
                             <p>The more difficult part is the table of contents and the manifest. Sigil can generate these for you, and it does it very well, but the table of contents especially can look very messy, as it defaults to adding every subheading into it.</p>
-                            <p>In the <code>nav.html</code>, or <code>toc.html</code>> (or XHTML of either) the table of contents is listed in the <code>&#60;nav&#62;</code> section. It will either accept just links <code>&#60;a&#62;</code> to pages one after another; or it will accept one (and only one) ordered list or unordered list <code>&#60;ol&#62;</code> or <code>&#60;ul&#62;</code> with any other lists tucked inside of the primary one as a list item <code>&#60;li&#62;</code>.</p>
+                            <p>In <code>toc.ncx</code>> (or XHTML) the table of contents is listed in the <code>&#60;nav&#62;</code> section. It will either accept just links <code>&#60;a&#62;</code> to pages one after another; or it will accept one (and only one) ordered list or unordered list <code>&#60;ol&#62;</code> or <code>&#60;ul&#62;</code> with any other lists tucked inside of the primary one as a list item <code>&#60;li&#62;</code>.</p>
                             <p>An example contents page is something like this, not including the surrounding HTML that Sigil will generate for you:</p>
                             <p style="background-color: wheat; border-radius: 0.3rem; padding:0rem 0.1rem 0rem 0.1rem;"><code>&#60;nav&#62;<br>&emsp;&#60;h1&#62;Table of Contents&#60;/h1&#62;<br>&emsp;&#60;ol&#62;<br>&emsp;&emsp;&#60;li&#62;&#60;a href="chap1.html"&#62;Chapter 1&#60;/a&#62;&#60;/li&#62;<br>&emsp;&emsp;&#60;li&#62;&#60;a href="chap2.html"&#62;Chapter 2&#60;/a&#62;&#60;/li&#62;<br>&emsp;&#60;/ol&#62;<br>&#60;/nav&#62;<br></code></p>
                             <ul>
